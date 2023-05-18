@@ -4,21 +4,18 @@ phases:
   install:
     runtime-versions:
       java: corretto17
-
-  pre-build:
+  pre_build:
     commands:
       - echo inicio do processo de build
-
   build:
     commands:
       - echo maven build
       - java -version
       - mvn clean package
-
-   post-build:
-     commands:
-       - echo fim do build
+  post_build:
+    commands:
+      - echo fim do build
 
 artifacts:
-      files:
-        - target/spring-boot.jar
+  files:
+    - target/spring-boot.jar
